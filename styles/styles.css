@@ -33,7 +33,7 @@ body {
 
 @media only screen and (orientation: portrait) {
   body {
-    background: url('../images/eli_vertical.jpg') no-repeat center center fixed;
+    background: url('../images/eli_vertical2.jpg') no-repeat center center fixed;
     background-size: cover;
   }
 }
