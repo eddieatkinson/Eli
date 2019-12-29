@@ -9,5 +9,6 @@
   
 //   document.body.style.background = backgroundImageUsed;
 // });
-
+const eliConsoleStyle = 'color: blue; font-size: 100px;';
+console.log('%cHey, Eli!!', eliConsoleStyle);
 
