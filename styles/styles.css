@@ -31,9 +31,28 @@ body {
   background-size: cover;
 }
 
+.countdown{
+  background-color: rgba(0, 255, 255, 0.8);
+  padding: 0.5rem;
+  margin: 1.5rem;
+  border-radius: 0.5rem;
+}
+
 @media only screen and (orientation: portrait) {
   body {
     background: url('../images/eli_vertical-2.jpg') no-repeat center center fixed;
     background-size: cover;
+  }
+  .countdown{
+    background: none;
+  }
+  #countdown-weeks, #countdown-days, #countdown-hours, #countdown-minutes, #countdown-seconds {
+    display: block;
+  }
+  #countdown-weeks > span, #countdown-days > span, #countdown-hours > span, #countdown-minutes > span, #countdown-seconds > span {
+    background-color: rgba(0, 255, 255, 0.8);
+    padding: 0.5rem;
+    margin: 1.5rem;
+    border-radius: 0.5rem;
   }
 }
