@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const eliConsoleStyle = 'color: blue; font-size: 100px;';
   console.log('%cHey, Eli!!', eliConsoleStyle);
   const updateTimer = () => {
-    const eliBirthday = new Date('04-01-2010');
+    const eliBirthday = new Date('04-01-2010T00:00:00');
     const now = new Date();
     const thisYear = now.getFullYear();
     const yearToUse = now.getMonth < eliBirthday.getMonth() ? now.getFullYear() : now.getFullYear() + 1;
