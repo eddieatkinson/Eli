@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const eliConsoleStyle = 'color: blue; font-size: 100px;';
   console.log('%cHey, Eli!!', eliConsoleStyle);
   const updateTimer = () => {
-    const eliBirthday = new Date('04-01-2010T00:00:00');
-    const now = new Date();
-    const thisYear = now.getFullYear();
-    const yearToUse = now.getMonth < eliBirthday.getMonth() ? now.getFullYear() : now.getFullYear() + 1;
-    const eliNextBirthday = new Date(`04-01-${yearToUse}`);
+    const eliBirthday = moment([2010, 3, 1]);
+    const now = moment();
+    const thisYear = Number(now.format('YYYY'));
+    const yearToUse = now.month() < eliBirthday.month() ? thisYear : thisYear + 1;
+    const eliNextBirthday = moment([yearToUse, 3, 1]);
     const millisecondsUntilNextBirthday = eliNextBirthday - now;
     const secondsUntilNextBirthday = Math.floor(millisecondsUntilNextBirthday / 1000) % 60;
     const secondsPluralizer = secondsUntilNextBirthday === 1 ? '' : 'S';
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const daysPluralizer = daysUntilNextBirthday === 1 ? '' : 'S';
     const weeksUntilNextBirthday = Math.floor(millisecondsUntilNextBirthday / (1000 * 60 * 60 * 24 * 7));
     const weeksPluralizer = weeksUntilNextBirthday === 1 ? '' : 'S';
-    console.log(minutesUntilNextBirthday);
     document.getElementById('countdown-weeks').innerHTML = `<span>${weeksUntilNextBirthday} WEEK${weeksPluralizer}</span>`;
     document.getElementById('countdown-days').innerHTML = `<span>${daysUntilNextBirthday} DAY${daysPluralizer}</span>`;
     document.getElementById('countdown-hours').innerHTML = `<span>${hoursUntilNextBirthday} HOUR${hoursPluralizer}</span>`;
