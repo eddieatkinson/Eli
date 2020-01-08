@@ -10,7 +10,44 @@ document.addEventListener('DOMContentLoaded', () => {
 //   document.body.style.background = backgroundImageUsed;
 
   const eliConsoleStyle = 'color: blue; font-size: 100px;';
+  const consoleMessage = `
+                        _______
+                       / _____ \\
+                      | /     \\ |
+                      | \\_____/ |
+                      |         |
+                      |   _____ |
+                      | -----   |
+                      | ------- |
+                      |         |
+                      |         |
+                      |         |
+                      |         |
+                      |  _____  |
+                      | ------- |
+                ______| ----    |______
+               /      |  ------ |      \\
+              |       |   ---   |       |
+              |       |         |       |_____
+              |       |         |       |     \\
+              |       |         |       |      |
+              |       |         |       |      |
+              |       |         |       |      |
+  ________    |      /           \\      |      |
+ /        \\   |                          \\     |
+/          \\  |                                 \\
+\\__         \\ |                                  |
+   \\         \\|                                  |
+    \\         |                                  |
+     \\         \\                                 |
+      \\         \\                                |
+       \\                                         |
+        \\                                        |
+         \\                                       |
+          \\                                     /
+           \\___                               /`
   console.log('%cHey, Eli!!', eliConsoleStyle);
+  console.log(consoleMessage);
   const updateTimer = () => {
     const eliBirthday = moment([2010, 3, 1]);
     const now = moment();
