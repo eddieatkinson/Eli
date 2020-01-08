@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //   document.body.style.background = backgroundImageUsed;
 
   const eliConsoleStyle = 'color: blue; font-size: 100px;';
-  const consoleMessage = `
+  const consoleMessage1 = `
                         _______
                        / _____ \\
                       | /     \\ |
@@ -46,8 +46,29 @@ document.addEventListener('DOMContentLoaded', () => {
          \\                                       |
           \\                                     /
            \\___                               /`
+
+  const consoleMessage2 = 
+  `
+  
+$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$'\`$$$$$$$$$$$$$'\`$$$$$
+$$$$  $$$$$$$$$$$  $$$$$$
+$$$$. \`$' \\' \\$\`  $$$$$$$
+$$$$$. !\\  i  i .$$$$$$$$
+$$$$$$   \`--\`--.$$$$$$$$$
+$$$$$$L        \`$$$$$^^$$
+$$$$$$$.   .'   ""~   $$$
+$$$$$$$$.  ;      .e$$$$$
+$$$$$$$$$   \`.$$$$$$$$$$$
+$$$$$$$$    .$$$$$$$$$$$$
+$$$$$$$     $$$$$$$by$TL$
+-------------------------
+       I LOVE YOU
+-------------------------`
   console.log('%cHey, Eli!!', eliConsoleStyle);
-  console.log(consoleMessage);
+  console.log(consoleMessage1);
+  console.log(consoleMessage2);
   const updateTimer = () => {
     const eliBirthday = moment([2010, 3, 1]);
     const now = moment();
