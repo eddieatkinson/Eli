@@ -1,13 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-//   const numImages = 2;
-//   const mediaQuery = window.matchMedia('(orientation: portrait)');
-//   let orientationVar = mediaQuery.matches ? 'vertical' : 'horizontal';
-  
-//   console.log(orientationVar);
-//   const backgroundImageUsed = `url('./images/eli_${orientationVar}-${Math.ceil(Math.random() * numImages)}.jpg') no-repeat center center fixed`;
-//   console.log(backgroundImageUsed);
-  
-//   document.body.style.background = backgroundImageUsed;
+  let orientationVar = 'initial';
+  const orientationListener = () => {
+    const numImages = 2;
+    let isPortrait = window.matchMedia('(orientation: portrait)').matches;
+    newOrientationVar = isPortrait ? 'vertical' : 'horizontal';
+    if (newOrientationVar !== orientationVar) {
+      orientationVar = newOrientationVar;
+      const backgroundImageUsed = `url('./images/eli_${orientationVar}-${Math.ceil(Math.random() * numImages)}.jpg') no-repeat center center fixed`;
+      document.body.style.background = backgroundImageUsed;
+    }
+  }
+
+  orientationListener();
+
+  window.onresize = orientationListener;
 
   const eliConsoleStyle = 'color: blue; font-size: 100px;';
   const consoleMessage1 = `
@@ -94,4 +100,6 @@ $$$$$$$     $$$$$$$by$TL$
   };
   updateTimer();
   setInterval(updateTimer, 1000);
+  window.onresize = orientationListener;
 });
+
