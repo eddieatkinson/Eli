@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       orientationVar = newOrientationVar;
       const backgroundImageUsed = `url('./images/eli_${orientationVar}-${Math.ceil(Math.random() * numImages)}.jpg') no-repeat center center fixed`;
       document.body.style.background = backgroundImageUsed;
+      document.body.style.backgroundSize = 'cover';
     }
   }
 
@@ -100,6 +101,5 @@ $$$$$$$     $$$$$$$by$TL$
   };
   updateTimer();
   setInterval(updateTimer, 1000);
-  window.onresize = orientationListener;
 });
 
